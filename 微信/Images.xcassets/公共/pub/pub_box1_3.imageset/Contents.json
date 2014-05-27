@@ -1,0 +1,31 @@
+{
+  "images" : [
+    {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "fill",
+          "width" : 34,
+          "height" : 1
+        },
+        "capInsets" : {
+          "bottom" : 12,
+          "top" : 0,
+          "right" : 31,
+          "left" : 23
+        }
+      },
+      "idiom" : "universal",
+      "scale" : "1x",
+      "filename" : "pub_box1_3@2x.png"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

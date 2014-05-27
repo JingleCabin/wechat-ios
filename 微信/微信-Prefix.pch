@@ -1,0 +1,48 @@
+//
+// Prefix header for all source files of the '微信' target in the '微信' project
+//
+
+#import <Availability.h>
+//用户信息
+#define kMY_USER_ID @"myUserId"
+#define kMY_API_KEY @"myApiKey"
+#define kMY_USER_PASSWORD @"myUserPassword"
+#define kMY_USER_DESC @"myUserDescription"
+#define kMY_USER_NICKNAME @"myUserNickname"
+#define kMY_USER_Head @"myUserHead"
+#define kMY_USER_LoginName @"myUserLoginName"
+#define kXMPPHost @"108.186.161.251"
+#define kXMPPmyJID @"myXmppJid"
+#define kXMPPmyPassword @"myXmppPassword"
+#define kXMPPNewMsgNotifaction @"xmppNewMsgNotifaction"
+
+//FMDB
+#define FMDBQuickCheck(SomeBool) { if (!(SomeBool)) { NSLog(@"Failure on line %d", __LINE__); abort(); } }
+
+#define DATABASE_PATH [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0]stringByAppendingString:@"/weChat.db"]
+
+
+//API路径
+#define API_BASE_URL(_URL_) [NSURL URLWithString:[@"http://108.186.161.251/api/" stringByAppendingString:_URL_]]
+#define FILE_BASE_URL(_FILE_) [NSURL URLWithString:[@"http://108.186.161.251/" stringByAppendingString:_FILE_]]
+
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import "ASIFormDataRequest.h"
+#import "SBJsonParser.h"
+#import "SBJson.h"
+#import "WCXMPPManager.h"
+#import "WCMessageObject.h"
+#import "WCUserObject.h"
+#import "WCMessageUserUnionObject.h"
+#import "Photo.h"
+#import "MMProgressHUD.h"
+#import "UIImageView+RZWebImage.h"
+#endif
